@@ -1,0 +1,13 @@
+{
+  "header": {
+    "applyc": "Apps du lycée",
+    "private": "Zone privée",
+    "language": "Langue:",
+    "login": "Entrer"
+  },
+  "body": {
+    "hi": "Salut! :D",
+    "description": "Vous trouverez sur cette plateforme différents outils pour rationaliser vos démarches administratives.",
+    "phrase": "Sites Web les plus utilisés"
+  }
+}

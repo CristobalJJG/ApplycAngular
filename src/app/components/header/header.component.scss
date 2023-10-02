@@ -1,0 +1,74 @@
+@import "/src/styles";
+
+header.flex {
+  height: 75px;
+}
+
+$side-margin: 15px;
+section {
+  margin-left: $side-margin;
+}
+
+.btn {
+  margin-right: $side-margin;
+}
+
+nav.flex {
+  gap: $side-margin;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.btn {
+    justify-content: center;
+    gap: $side-margin;
+  }
+
+  button {
+    @include button($blue, $white, 175px, 35px);
+  }
+}
+
+.line {
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 14px;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  width: 150px;
+  text-align: center;
+  &:visited {
+    color: black;
+  }
+
+  &::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: $black;
+    display: block;
+    transition: $transition;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+.y {
+  color: $yellow;
+}
+.b {
+  color: $blue;
+}
+.r {
+  color: $red;
+}

@@ -1,0 +1,46 @@
+/* You can add global styles to this file, and also import other style files */
+@import "/src/styles/colors";
+@import "/src/styles/mixins";
+@import "/src/styles/transitions";
+@import "/src/styles/shadows";
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  transition: $transition;
+}
+
+button {
+  width: 150px;
+  height: 30px;
+}
+
+h1 {
+  font-size: x-large;
+  color: $black;
+}
+h2 {
+  font-size: medium;
+  color: $dark-gray;
+}
+
+a {
+  text-decoration: none;
+  color: $black;
+  &:visited {
+    color: black;
+  }
+}
+
+/* Scroll bars */
+* {
+  ::-webkit-scrollbar {
+    background-color: whitesmoke;
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: $light-gray;
+    border-radius: 10px;
+  }
+}

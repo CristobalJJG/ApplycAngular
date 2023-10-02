@@ -1,0 +1,34 @@
+@import "/src/styles.scss";
+
+$br: 10px;
+.card {
+  width: 250px;
+  height: 250px;
+  display: block;
+  position: relative;
+  border-radius: $br;
+  box-shadow: $shadow-bottom;
+
+  &:hover {
+    box-shadow: $shadow-bottomer;
+    p {
+      background-color: rgba($black, 0.8);
+      height: 60px;
+    }
+  }
+}
+img {
+  border-radius: $br;
+}
+p {
+  position: absolute;
+  width: 250px;
+  display: grid;
+  place-items: center;
+  height: 30px;
+  text-align: center;
+  background-color: rgba($black, 0.6);
+  color: $white;
+  border-radius: 0 0 10px 10px;
+  bottom: 0;
+}

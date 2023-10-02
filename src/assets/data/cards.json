@@ -1,0 +1,59 @@
+{
+  "cards": [
+    {
+      "url": "https://school.beneylu.com/auth/login",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/beneylu_school.webp",
+      "name": "Beneylu"
+    },
+    {
+      "url": "https://www.lfigrancanaria.com/info/comedor/",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/comedor_menu-1.webp",
+      "name": "Comedor (Menú)"
+    },
+    {
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdhmWR7BEuSpvkwQaUC01Hq8dEsSXzXMJ3Rc6wwYS0wxXxfMQ/viewform",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/comedor_reservas.webp",
+      "name": "Comedor (Reservas)"
+    },
+    {
+      "url": "https://mlfespagne.eduka.school",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/eduka.webp",
+      "name": "Eduka"
+    },
+    {
+      "url": "https://lfigrancanaria.portalhorario.com",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/horario_portal.webp",
+      "name": "Horario (Portal)"
+    },
+    {
+      "url": "https://192.168.10.244:5075",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/nas.webp",
+      "name": "LFIGC Datos"
+    },
+    {
+      "url": "https://www.lfigrancanaria.com",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/LFIGC.webp",
+      "name": "LFIGC Web"
+    },
+    {
+      "url": "https://www.gobiernodecanarias.org/educacion/9/pekweb/Ekade/",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/pincel_ekade.webp",
+      "name": "Pincel Ekade"
+    },
+    {
+      "url": "https://1340019t.index-education.net/pronote/professeur.html",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/pronote.webp",
+      "name": "PRONOTE"
+    },
+    {
+      "url": "https://sacoche.sesamath.net/sacoche/?id=11911",
+      "img": "https://applyc.es/wp-content/uploads/2023/03/sacoche.webp",
+      "name": "Sacoche"
+    },
+    {
+      "url": "https://x3.mlfprod.deveho.com/auth/login/page",
+      "img": "https://applyc.es/wp-content/uploads/applyc/2023-07/sagex3.webp",
+      "name": "Sage X3"
+    }
+  ]
+}

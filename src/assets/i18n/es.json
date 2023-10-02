@@ -1,0 +1,13 @@
+{
+  "header": {
+    "applyc": "Apps del Liceo",
+    "private": "Área Privada",
+    "language": "Idioma:",
+    "login": "Entrar"
+  },
+  "body": {
+    "hi": "¡Buenas! :D",
+    "description": "En esta plataforma encontrarás diversas herramientas para agilizar tus trámites administrativos.",
+    "phrase": "Webs más usadas"
+  }
+}

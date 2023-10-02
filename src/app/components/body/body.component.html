@@ -1,0 +1,11 @@
+<h2>{{ "body.hi" | translate }}</h2>
+<h1>{{ "body.description" | translate }}</h1>
+
+<hr />
+
+<p class="h3">{{ "body.phrase" | translate }}</p>
+<section class="flex">
+  <article *ngFor="let c of cards">
+    <app-card [data]="c"></app-card>
+  </article>
+</section>

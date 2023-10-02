@@ -1,0 +1,24 @@
+$positive: 2.5px;
+$negative: -2.5px;
+$blur: 10px;
+$size: 3px;
+
+$shadow-up: 0px $negative $blur $size rgba($black, 0.5);
+$shadow-left: $negative 0px $blur $size rgba($black, 0.5);
+$shadow-right: $positive 0px $blur $size rgba($black, 0.5);
+$shadow-bottom: 0px $positive $blur $size rgba($black, 0.5);
+
+$positive-plus: 5px;
+$negative-plus: -5px;
+$shadow-upper: 0px $negative-plus $blur $size rgba($black, 0.7);
+$shadow-lefter: $negative-plus 0px $blur $size rgba($black, 0.7);
+$shadow-righter: $positive-plus 0px $blur $size rgba($black, 0.7);
+$shadow-bottomer: 0px $positive-plus $blur $size rgba($black, 0.7);
+
+$positive-minus: 1px;
+$negative-minus: -1px;
+$size: 2px;
+$shadow-upless: 0px $negative-minus $blur $size rgba($black, 0.5);
+$shadow-leftless: $negative-minus 0px $blur $size rgba($black, 0.5);
+$shadow-rightless: $positive-minus 0px $blur $size rgba($black, 0.5);
+$shadow-bottomless: 0px $positive-minus $blur $size rgba($black, 0.5);

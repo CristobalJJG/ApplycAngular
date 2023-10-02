@@ -1,0 +1,14 @@
+@import "/src/styles.scss";
+.grid {
+  display: grid;
+}
+
+app-body {
+  height: calc(1000px - 100px - 50px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 50px 75px 0 75px;
+}
