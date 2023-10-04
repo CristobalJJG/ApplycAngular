@@ -1,4 +1,10 @@
-<a class="card" href="data.url" *ngIf="data != undefined; else blank">
+<a
+  class="card"
+  href="{{ data.url }}"
+  rel="oppener"
+  target="_blank"
+  *ngIf="data != undefined; else blank"
+>
   <img src="{{ data.img }}" alt="{{ data.name }}" width="250" height="250" />
   <p>{{ data.name }}</p>
 </a>
