@@ -6,6 +6,7 @@
       name="email"
       id="email"
       required
+      #email
       class="input"
       placeholder="{{ 'access.email' | translate }}"
     />
@@ -14,11 +15,16 @@
       name="password"
       id="password"
       required
+      #password
       class="input"
       placeholder="{{ 'access.password' | translate }}"
     />
 
-    <button type="submit" class="flex btn submit" (click)="login()">
+    <button
+      type="submit"
+      class="flex btn submit"
+      (click)="login(email.value, password.value)"
+    >
       <svg width="16" height="16" viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
         <path
@@ -34,4 +40,7 @@
       <a href="#">{{ "access.f-pass2" | translate }}</a>
     </p>
   </form>
+  <p *ngIf="error != ''"></p>
+  <span *ngIf="user == undefined">Not registered</span>
+  <span *ngIf="user != undefined">{{ user }}</span>
 </div>

@@ -19,7 +19,7 @@ export class AuthenticationService {
   private static app = initializeApp(environment.firebaseConfig);
   private static auth = getAuth(AuthenticationService.app);
 
-  private static user: Person;
+  private user: string = '';
 
   public static getApp() {
     return this.app;
@@ -31,6 +31,19 @@ export class AuthenticationService {
 
   constructor() {}
 
+  async login(userEmail: string, password: string) {
+    this.logout();
+    await signInWithEmailAndPassword(
+      AuthenticationService.auth,
+      userEmail,
+      password
+    )
+      .then((result) => (this.user = result.user.email + ''))
+      .catch((error) => this.showError(error));
+
+    return this.user;
+  }
+
   async register(userEmail: string, password: string) {
     await createUserWithEmailAndPassword(
       AuthenticationService.auth,
@@ -39,26 +52,16 @@ export class AuthenticationService {
     )
       .then((result) => {
         sendEmailVerification(result.user)
-          .then(() => {
-            console.log('Validation email sent');
-          })
-          .catch((error) => {
-            this.showError(error);
-          });
+          .then(() => console.log('Validation email sent'))
+          .catch((error) => this.showError(error));
       })
-      .catch((error) => {
-        this.showError(error);
-      });
+      .catch((error) => this.showError(error));
   }
 
   async logout() {
     await signOut(AuthenticationService.auth)
-      .then(() => {
-        console.log('Logged out successfully');
-      })
-      .catch((error) => {
-        this.showError(error);
-      });
+      .then(() => console.log('Logged out successfully'))
+      .catch((error) => this.showError(error));
   }
 
   showError(error: any) {
