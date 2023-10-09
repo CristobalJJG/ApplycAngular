@@ -3,9 +3,9 @@
 h1,
 h2,
 .h3,
-hr,
 section {
-  width: 100%;
+  width: calc(100% - 25px);
+  margin-left: 25px;
 }
 h1 {
   font-size: xx-large;
@@ -24,7 +24,8 @@ h2 {
 hr {
   border-radius: 5px;
   border: 2px solid $light-gray;
-  margin: 25px 0;
+  width: 90%;
+  margin: 25px 5%;
 }
 
 .flex {

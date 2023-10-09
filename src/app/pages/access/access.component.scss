@@ -1,0 +1,55 @@
+@import "../../../styles.scss";
+
+.container {
+  height: 100%;
+  width: 350px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.submit,
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.btn {
+    justify-content: center;
+    gap: 10px;
+  }
+}
+.btn {
+  margin-top: 25px;
+  color: $white;
+  @include button($gray, $white, 200px, 40px);
+}
+
+.logo {
+  font-size: 3rem;
+  color: $black;
+  font-weight: 600;
+  margin: 30px;
+}
+
+::placeholder {
+  color: $gray;
+}
+
+.forgotten {
+  text-align: center;
+  font-size: 0.8rem;
+  width: 80%;
+  color: $gray;
+  margin: 15px 0;
+}
+
+a {
+  color: inherit;
+  font-weight: bold;
+}

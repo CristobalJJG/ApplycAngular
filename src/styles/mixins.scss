@@ -12,13 +12,16 @@
   border-radius: 10px;
   border: 3px solid $color;
   transition: $transition;
-  box-shadow: $shadow-bottom;
+  box-shadow: 0 6px 8px rgba($black, 0.075), 6px 6px 6px rgba($white, 0.781);
   cursor: pointer;
+
   &:hover {
+    background-color: rgba($color, 0.8);
     box-shadow: $shadow-bottomer;
   }
 
   &:active {
+    background-color: rgba($color, 0.8);
     box-shadow: $shadow-bottomless;
   }
 }

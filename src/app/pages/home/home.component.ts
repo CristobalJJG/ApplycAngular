@@ -3,11 +3,11 @@ import { Component } from '@angular/core';
 import { Card } from 'src/app/interfaces/Card';
 
 @Component({
-  selector: 'app-body',
-  templateUrl: './body.component.html',
-  styleUrls: ['./body.component.scss'],
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
 })
-export class BodyComponent {
+export class HomeComponent {
   cards: Card[] = [];
 
   constructor(private http: HttpClient) {
