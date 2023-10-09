@@ -17,6 +17,11 @@ nav.flex {
   gap: $side-margin;
 }
 
+h1,
+h2 {
+  cursor: pointer;
+}
+
 .flex {
   display: flex;
   justify-content: space-between;

@@ -9,5 +9,13 @@
     "hi": "¡Buenas! :D",
     "description": "En esta plataforma encontrarás diversas herramientas para agilizar tus trámites administrativos.",
     "phrase": "Webs más usadas"
+  },
+  "access": {
+    "title": "¡Buenas!",
+    "email": "Correo Corporativo",
+    "password": "Contraseña",
+    "login": "Entrar",
+    "f-pass1": "¿Olvidaste tu contraseña?",
+    "f-pass2": "Recurpérala aquí"
   }
 }

@@ -9,8 +9,9 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { FormsModule } from '@angular/forms';
-import { BodyComponent } from './components/body/body.component';
+import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AccessComponent } from './pages/access/access.component';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -21,8 +22,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     AppComponent,
     HeaderComponent,
     CardComponent,
-    BodyComponent,
+    HomeComponent,
     FooterComponent,
+    AccessComponent,
   ],
   imports: [
     BrowserModule,

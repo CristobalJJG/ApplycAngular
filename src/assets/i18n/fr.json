@@ -9,5 +9,13 @@
     "hi": "Salut! :D",
     "description": "Vous trouverez sur cette plateforme différents outils pour rationaliser vos démarches administratives.",
     "phrase": "Sites Web les plus utilisés"
+  },
+  "access": {
+    "title": "Bonjour!",
+    "email": "Courriel Entreprise",
+    "password": "Mot de passe",
+    "login": "Se Connecter",
+    "f-pass1": "Avez-vous oublié votre mot de passe?",
+    "f-pass2": "Le récupérer ici"
   }
 }

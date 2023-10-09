@@ -1,13 +1,15 @@
 <header class="flex">
   <section>
     <article>
-      <h1>
+      <h1 routerLink="home" routerLinkActive="true">
         <span class="b">a</span>
         <span class="r">p</span><span class="y">p</span>lyc
       </h1>
     </article>
     <article>
-      <h2>{{ "header.applyc" | translate }}</h2>
+      <h2 routerLink="home" routerLinkActive="true">
+        {{ "header.applyc" | translate }}
+      </h2>
     </article>
   </section>
 
@@ -28,7 +30,12 @@
 
   <div class="btn">
     <!-- Si user no está registrado -->
-    <button class="flex btn" *ngIf="userName == ''">
+    <button
+      class="flex btn"
+      *ngIf="true"
+      routerLink="access"
+      routerLinkActive="true"
+    >
       <svg width="16" height="16" viewBox="0 0 16 16">
         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
         <path

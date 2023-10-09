@@ -1,29 +1,58 @@
 export class Person {
+  id: string;
   personalData?: PersonalData;
   contactData?: ContactData;
   professionalData?: ProfessionalData;
 
   constructor(
+    id: string,
     personalData?: PersonalData,
     contactData?: ContactData,
     professionalData?: ProfessionalData
   ) {
+    this.id = id;
     if (personalData) this.personalData = personalData;
     if (contactData) this.contactData = contactData;
     if (professionalData) this.professionalData = professionalData;
   }
 
+  getId() {
+    return this.id;
+  }
+
   getName() {
     return `${this.personalData?.name}`;
   }
+
+  isAdmin() {
+    return this.personalData?.isAdmin;
+  }
+
+  getEmail() {
+    return this.contactData?.corporativeEmail;
+  }
+
   getFullUsername() {
     return `${this.personalData?.name} ${this.personalData?.surname1} ${this.personalData?.surname2}`;
+  }
+
+  getPersonalData() {
+    return this.personalData;
+  }
+
+  getContactData() {
+    return this.contactData;
+  }
+
+  getProfessionalData() {
+    return this.professionalData;
   }
 }
 
 export enum Gender {
   Male = 'M.',
-  female = 'Mme.',
+  Female = 'Mme.',
+  Other = '',
 }
 
 export interface PersonalData {

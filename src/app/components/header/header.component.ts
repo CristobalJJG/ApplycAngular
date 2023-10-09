@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Person } from 'src/app/interfaces/Person';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 import { TranslateService } from 'src/app/services/translate.service';
 
 @Component({
@@ -8,11 +10,11 @@ import { TranslateService } from 'src/app/services/translate.service';
 })
 export class HeaderComponent {
   lang = '';
-  userName: string;
+  user: any = AuthenticationService.getAuth();
 
   constructor(private ts: TranslateService) {
     this.lang = ts.getLang();
-    this.userName = localStorage.getItem('user') ?? '';
+    console.log(this.user);
   }
   translate() {
     this.ts.translate(this.lang);

@@ -9,5 +9,13 @@
     "hi": "Hi! :D",
     "description": "On this platform you will find various tools to streamline your administrative procedures.",
     "phrase": "Most used Websites"
+  },
+  "access": {
+    "title": "Hello!",
+    "email": "Corporate Email",
+    "password": "Password",
+    "login": "Log In",
+    "f-pass1": "Did you forget your password?",
+    "f-pass2": "Recover it here"
   }
 }
