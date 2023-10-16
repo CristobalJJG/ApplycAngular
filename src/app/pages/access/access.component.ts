@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/services/authentication.service';
 import { SnackbarService } from 'src/app/services/snackbar.service';
 
@@ -8,13 +9,9 @@ import { SnackbarService } from 'src/app/services/snackbar.service';
   styleUrls: ['./access.component.scss'],
 })
 export class AccessComponent implements OnInit {
-  constructor(
-    private auth: AuthenticationService,
-    private snack: SnackbarService
-  ) {}
+  constructor(private auth: AuthenticationService) {}
 
-  user: string | null | undefined =
-    AuthenticationService.getAuth().currentUser?.email;
+  user = AuthenticationService.user;
 
   pastEmail: string = '';
   pastPassword: string = '';
@@ -34,9 +31,10 @@ export class AccessComponent implements OnInit {
     this.pastPassword = password;
     await this.auth
       .login(email, password)
-      .then((res) => {
-        this.user = res;
-        this.snack.openSnackBar(this.user);
+      .then(() => {
+        setTimeout(() => {
+          window.location.reload();
+        }, 2500);
       })
       .catch((e) => console.log(e));
   }

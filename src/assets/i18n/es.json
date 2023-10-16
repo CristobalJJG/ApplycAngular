@@ -17,5 +17,12 @@
     "login": "Entrar",
     "f-pass1": "¿Olvidaste tu contraseña?",
     "f-pass2": "Recurpérala aquí"
+  },
+  "snack": {
+    "register": "Correo de validación enviado con éxito.",
+    "login": "Inicio de sesión correcto.",
+    "validate": "Asegúrate de haber validado tu cuenta.",
+    "logout": "Cerró sesión de forma exitosa.",
+    "close": "Cerrar."
   }
 }

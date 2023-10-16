@@ -17,5 +17,12 @@
     "login": "Se Connecter",
     "f-pass1": "Avez-vous oublié votre mot de passe?",
     "f-pass2": "Le récupérer ici"
+  },
+  "snack": {
+    "register": "Courriel de validation envoyé avec succès.",
+    "login": "Connexion réussie.",
+    "validate": "Assurez-vous d'avoir validé votre compte.",
+    "logout": "Vous avez été déconnecté avec succès.",
+    "close": "Fermer."
   }
 }

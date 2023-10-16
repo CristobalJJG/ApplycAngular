@@ -32,7 +32,7 @@
     <!-- Si user no está registrado -->
     <button
       class="flex btn"
-      *ngIf="true"
+      *ngIf="user == ''"
       routerLink="access"
       routerLinkActive="true"
     >
@@ -45,5 +45,8 @@
       </svg>
       {{ "header.login" | translate }}
     </button>
+    <p *ngIf="user != ''" (click)="logout()">{{ user }}</p>
   </div>
 </header>
+
+<ng-template #userName> </ng-template>

@@ -4,14 +4,14 @@ import {
   signInWithEmailAndPassword,
   getAuth,
   signOut,
-  isSignInWithEmailLink,
-  signInWithEmailLink,
   sendEmailVerification,
 } from 'firebase/auth';
 
 import { environment } from 'src/environments/environment.development';
-import { getApp, initializeApp } from 'firebase/app';
-import { Person } from '../interfaces/Person';
+import { initializeApp } from 'firebase/app';
+import { SnackbarService } from './snackbar.service';
+import { DatabaseService } from './database.service';
+import { CookieService } from 'ngx-cookie-service';
 @Injectable({
   providedIn: 'root',
 })
@@ -19,7 +19,7 @@ export class AuthenticationService {
   private static app = initializeApp(environment.firebaseConfig);
   private static auth = getAuth(AuthenticationService.app);
 
-  private user: string = '';
+  static user = AuthenticationService.auth?.currentUser;
 
   public static getApp() {
     return this.app;
@@ -29,7 +29,11 @@ export class AuthenticationService {
     return this.auth;
   }
 
-  constructor() {}
+  constructor(
+    private sbs: SnackbarService,
+    private db: DatabaseService,
+    private cs: CookieService
+  ) {}
 
   async login(userEmail: string, password: string) {
     this.logout();
@@ -38,10 +42,20 @@ export class AuthenticationService {
       userEmail,
       password
     )
-      .then((result) => (this.user = result.user.email + ''))
+      .then((result) => {
+        AuthenticationService.user = result.user;
+        if (!result.user.emailVerified) {
+          this.sbs.openSnackBar('snack.validate', '');
+          this.logout();
+        } else {
+          this.cs.set('username', userEmail.split('@')[0]);
+          this.sbs.openSnackBar('snack.login', '');
+          setTimeout(() => {
+            window.location.reload();
+          }, 2000);
+        }
+      })
       .catch((error) => this.showError(error));
-
-    return this.user;
   }
 
   async register(userEmail: string, password: string) {
@@ -51,16 +65,28 @@ export class AuthenticationService {
       password
     )
       .then((result) => {
+        this.db.addNewUser(result.user.uid || '', result.user.email || '');
         sendEmailVerification(result.user)
-          .then(() => console.log('Validation email sent'))
-          .catch((error) => this.showError(error));
+          .then(() =>
+            this.sbs.openSnackBar('Correo de validación enviado con exito', '')
+          )
+          .catch((error) =>
+            this.sbs.openSnackBar(
+              'Error al crear el usuario: ' + error.message,
+              ''
+            )
+          );
       })
       .catch((error) => this.showError(error));
   }
 
   async logout() {
     await signOut(AuthenticationService.auth)
-      .then(() => console.log('Logged out successfully'))
+      .then(() => {
+        console.log('Logged out successfully');
+        AuthenticationService.user = null;
+        this.cs.delete('username');
+      })
       .catch((error) => this.showError(error));
   }
 
