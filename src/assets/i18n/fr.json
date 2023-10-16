@@ -23,6 +23,19 @@
     "login": "Connexion réussie.",
     "validate": "Assurez-vous d'avoir validé votre compte.",
     "logout": "Vous avez été déconnecté avec succès.",
+    "error": "Erreur",
     "close": "Fermer."
+  },
+  "error": {
+    "sameBefore": "Le courriel et le mot de passe saisis sont les mêmes que les précédents.",
+    "exists": "Le courriel existe déjà.",
+    "perm": "Les autorisations sont manquantes.",
+    "intern": "Erreur interne. Désolé, cela sera corrigé à un moment donné.",
+    "invalid-mail": "Courriel invalide.",
+    "invalid-pass": "Mot de passe invalide.",
+    "invalid-cred": "Informations d'identification invalides.",
+    "not-fount": "Aucun utilisateur avec ce courriel n'existe.",
+    "many-tries": "Trop de tentatives",
+    "": ""
   }
 }

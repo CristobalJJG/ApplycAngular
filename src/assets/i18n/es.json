@@ -23,6 +23,19 @@
     "login": "Inicio de sesión correcto.",
     "validate": "Asegúrate de haber validado tu cuenta.",
     "logout": "Cerró sesión de forma exitosa.",
+    "error": "Error",
     "close": "Cerrar."
+  },
+  "error": {
+    "sameBefore": "Correo y contraseña introducido son iguales a la anterior.",
+    "exists": "El correo ya existe.",
+    "perm": "Faltan permisos.",
+    "intern": "Error interno. Lo sentimos, en algún momento se arreglará.",
+    "invalid-mail": "Correo no válido.",
+    "invalid-pass": "Contraseña inválida.",
+    "invalid-cred": "Correo o Contraseña inválidos.",
+    "not-fount": "No existen usuarios con ese correo.",
+    "many-tries": "Demasiados intentos",
+    "": ""
   }
 }

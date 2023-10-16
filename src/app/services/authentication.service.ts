@@ -12,13 +12,14 @@ import { initializeApp } from 'firebase/app';
 import { SnackbarService } from './snackbar.service';
 import { DatabaseService } from './database.service';
 import { CookieService } from 'ngx-cookie-service';
+import { ErrorManagerService } from './error-manager.service';
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
   private static app = initializeApp(environment.firebaseConfig);
   private static auth = getAuth(AuthenticationService.app);
-
+  private error = '';
   static user = AuthenticationService.auth?.currentUser;
 
   public static getApp() {
@@ -32,11 +33,12 @@ export class AuthenticationService {
   constructor(
     private sbs: SnackbarService,
     private db: DatabaseService,
-    private cs: CookieService
+    private cs: CookieService,
+    private ms: ErrorManagerService
   ) {}
 
   async login(userEmail: string, password: string) {
-    this.logout();
+    let error = [''];
     await signInWithEmailAndPassword(
       AuthenticationService.auth,
       userEmail,
@@ -55,7 +57,20 @@ export class AuthenticationService {
           }, 2000);
         }
       })
-      .catch((error) => this.showError(error));
+      .catch((e) => {
+        this.showError(error);
+        this.logout();
+        let x = this.ms.manageErrors(e.code);
+        error[0] = x;
+        console.log(error);
+        console.log(x);
+      });
+    console.log(error);
+    if (error[0] != '') {
+      return error[0];
+    } else {
+      return '';
+    }
   }
 
   async register(userEmail: string, password: string) {
@@ -78,6 +93,7 @@ export class AuthenticationService {
           );
       })
       .catch((error) => this.showError(error));
+    return this.error;
   }
 
   async logout() {

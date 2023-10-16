@@ -29,7 +29,7 @@ export class HeaderComponent {
 
   logout() {
     this.auth.logout().then(() => {
-      this.sbs.openSnackBar('access.logout', '');
+      this.sbs.openSnackBar('snack.logout', '');
       setTimeout(() => {
         window.location.reload();
       }, 2500);

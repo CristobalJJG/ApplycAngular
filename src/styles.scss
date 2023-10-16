@@ -47,7 +47,7 @@ $applyc-angular-theme: mat.define-light-theme(
 * {
   margin: 0;
   padding: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", Roboto, "Helvetica Neue", sans-serif;
   transition: $transition;
 }
 
@@ -78,11 +78,13 @@ a {
   ::-webkit-scrollbar {
     background-color: whitesmoke;
     border-radius: 10px;
+    width: 10px;
   }
 
   ::-webkit-scrollbar-thumb {
     background-color: $light-gray;
     border-radius: 10px;
+    width: 5px;
   }
 }
 
@@ -92,5 +94,11 @@ body {
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* Menos de 500px */
+@media screen and (max-width: 500px) {
+  *::-webkit-scrollbar {
+    width: 5px;
+  }
 }

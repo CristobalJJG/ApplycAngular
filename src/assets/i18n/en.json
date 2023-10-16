@@ -19,10 +19,23 @@
     "f-pass2": "Recover it here"
   },
   "snack": {
-    "register": "Email validation sent successfully.",
+    "register": "Validation email sent successfully.",
     "login": "Login successful.",
     "validate": "Make sure you have validated your account.",
-    "logout": "You have been logged out successfully.",
+    "logout": "Successfully logged out.",
+    "error": "Error.",
     "close": "Close."
+  },
+  "error": {
+    "sameBefore": "Email and password entered are the same as before.",
+    "exists": "Email already exists.",
+    "perm": "Permissions are missing.",
+    "intern": "Internal error. Sorry, this will be fixed at some point.",
+    "invalid-mail": "Invalid email.",
+    "invalid-pass": "Invalid password.",
+    "invalid-cred": "Invalid credentials.",
+    "not-fount": "No users with that email exist.",
+    "many-tries": "Too many attempts",
+    "": ""
   }
 }
