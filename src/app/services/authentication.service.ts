@@ -60,17 +60,10 @@ export class AuthenticationService {
       .catch((e) => {
         this.showError(error);
         this.logout();
-        let x = this.ms.manageErrors(e.code);
-        error[0] = x;
-        console.log(error);
-        console.log(x);
+        error[0] = this.ms.manageErrors(e.code);
       });
-    console.log(error);
-    if (error[0] != '') {
-      return error[0];
-    } else {
-      return '';
-    }
+    if (error[0] != '') return error[0];
+    else return '';
   }
 
   async register(userEmail: string, password: string) {
@@ -99,7 +92,6 @@ export class AuthenticationService {
   async logout() {
     await signOut(AuthenticationService.auth)
       .then(() => {
-        console.log('Logged out successfully');
         AuthenticationService.user = null;
         this.cs.delete('username');
       })

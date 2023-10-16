@@ -26,18 +26,13 @@ export class AccessComponent implements OnInit {
   }
 
   async login(email: string, password: string) {
-    if (email == this.pastEmail && password == this.pastPassword) {
+    if (email == this.pastEmail && password == this.pastPassword)
       this.error = this.ms.manageErrors('sameThanBefore');
-    } else {
+    else {
       this.error = '';
-      console.log('pe:' + this.pastEmail, 'pp:' + this.pastPassword);
-      console.log('ne:' + email, 'np:' + password);
-
       this.pastEmail = email;
       this.pastPassword = password;
-      await this.auth.login(email, password).then((e) => {
-        this.error = e;
-      });
+      await this.auth.login(email, password).then((e) => (this.error = e));
     }
   }
 }
