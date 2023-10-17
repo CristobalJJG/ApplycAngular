@@ -35,7 +35,7 @@ h2 {
   button {
     @include button($blue, $white, 175px, 35px);
   }
-  button {
+  button.outlined {
     @include outlinedButton($blue, $white, 175px, 35px);
   }
 }
@@ -49,9 +49,10 @@ h2 {
 }
 
 a {
+  cursor: pointer;
   text-decoration: none;
   color: $black;
-  width: 150px;
+  width: 200px;
   text-align: center;
   &:visited {
     color: black;
@@ -68,6 +69,24 @@ a {
 
   &:hover::after {
     width: 100%;
+  }
+}
+
+button.display {
+  width: 200px;
+  margin: 0;
+  padding: 0;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    p {
+      font-size: medium;
+    }
+    svg,
+    img {
+      margin: 0 15px;
+    }
   }
 }
 

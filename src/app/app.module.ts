@@ -29,6 +29,8 @@ import { CookieService } from 'ngx-cookie-service';
 /* Material */
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -58,6 +60,8 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     BrowserAnimationsModule,
     MatSnackBarModule,
     MatTooltipModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   providers: [TranslatePipe, CookieService],
   bootstrap: [AppComponent],

@@ -31,10 +31,10 @@
   color: $color;
 
   &:hover {
-    background-color: rgba($color, 0.4);
+    background-color: rgba($color, 0.15);
   }
 
   &:active {
-    background-color: rgba($color, 0.5);
+    background-color: rgba($color, 0.05);
   }
 }
