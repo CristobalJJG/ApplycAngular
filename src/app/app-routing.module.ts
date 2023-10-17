@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { AccessComponent } from './pages/access/access.component';
+import { AccessComponent } from './pages/access/access.page';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },

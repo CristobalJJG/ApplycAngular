@@ -1,6 +1,7 @@
 @import "/src/styles";
 
 header.flex {
+  box-shadow: $shadow-bottomer;
   height: 75px;
 }
 
@@ -48,7 +49,7 @@ h2 {
   }
 }
 
-a {
+a.priv {
   cursor: pointer;
   text-decoration: none;
   color: $black;
@@ -72,7 +73,7 @@ a {
   }
 }
 
-button.display {
+.display {
   width: 200px;
   margin: 0;
   padding: 0;

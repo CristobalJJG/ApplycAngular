@@ -5,8 +5,8 @@ import { ErrorManagerService } from 'src/app/services/error-manager.service';
 
 @Component({
   selector: 'app-access',
-  templateUrl: './access.component.html',
-  styleUrls: ['./access.component.scss'],
+  templateUrl: './access.page.html',
+  styleUrls: ['./access.page.scss'],
 })
 export class AccessComponent implements OnInit {
   constructor(

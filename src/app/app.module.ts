@@ -12,7 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 /* Páginas */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { AccessComponent } from './pages/access/access.component';
+import { AccessComponent } from './pages/access/access.page';
 
 /* Translate */
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -30,7 +30,6 @@ import { CookieService } from 'ngx-cookie-service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -61,7 +60,6 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     MatSnackBarModule,
     MatTooltipModule,
     MatMenuModule,
-    MatIconModule,
   ],
   providers: [TranslatePipe, CookieService],
   bootstrap: [AppComponent],

@@ -1,4 +1,8 @@
+@import "/src/styles";
 strong,
 p {
   margin: 10px 25px;
+}
+footer {
+  box-shadow: $shadow-upper;
 }
