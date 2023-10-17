@@ -11,8 +11,11 @@ import { FooterComponent } from './components/footer/footer.component';
 
 /* Páginas */
 import { AppComponent } from './app.component';
-import { HomeComponent } from './pages/home/home.component';
-import { AccessComponent } from './pages/access/access.page';
+import { HomePage } from './pages/home/home.page';
+import { DirectorioPage } from './pages/directorio/directorio.page';
+import { PersonalPage } from './pages/personal/personal.page';
+import { DocumentacionPage } from './pages/documentacion/documentacion.page';
+import { ParkingPage } from './pages/parking/parking.page';
 
 /* Translate */
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -30,6 +33,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
+import { AccessPage } from './pages/access/access.page';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -37,12 +41,19 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
 
 @NgModule({
   declarations: [
+    /* Pages */
     AppComponent,
+    HomePage,
+    AccessPage,
+    DirectorioPage,
+    PersonalPage,
+    DocumentacionPage,
+    ParkingPage,
+
+    /* Components */
     HeaderComponent,
     CardComponent,
-    HomeComponent,
     FooterComponent,
-    AccessComponent,
   ],
   imports: [
     BrowserModule,

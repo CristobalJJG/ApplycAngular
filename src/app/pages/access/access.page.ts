@@ -8,7 +8,7 @@ import { ErrorManagerService } from 'src/app/services/error-manager.service';
   templateUrl: './access.page.html',
   styleUrls: ['./access.page.scss'],
 })
-export class AccessComponent implements OnInit {
+export class AccessPage implements OnInit {
   constructor(
     private auth: AuthenticationService,
     private cs: CookieService,

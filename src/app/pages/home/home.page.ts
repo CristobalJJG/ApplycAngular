@@ -4,10 +4,10 @@ import { Card } from 'src/app/interfaces/Card';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  templateUrl: './home.page.html',
+  styleUrls: ['./home.page.scss'],
 })
-export class HomeComponent {
+export class HomePage {
   cards: Card[] = [];
 
   constructor(private http: HttpClient) {
