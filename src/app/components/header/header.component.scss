@@ -80,3 +80,13 @@ a {
 .r {
   color: $red;
 }
+
+.pt {
+  margin: 25px 25px 0 0;
+  width: 150px;
+  font-size: medium;
+  .mdc-text-field {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
