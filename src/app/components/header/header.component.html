@@ -15,9 +15,9 @@
 
   <!-- https://en.wikipedia.org/wiki/ISO_3166-1#:~:text=ISO%203166-1%20is%20published,name%20lower%20case%20(title%20case) -->
   <nav class="flex">
-    <a [matMenuTriggerFor]="menu" class="priv">
+    <span [matMenuTriggerFor]="menu" class="priv">
       {{ "header.private" | translate }}
-    </a>
+    </span>
 
     <mat-menu #menu="matMenu">
       <!-- Pantalla con todos los usuarios -->
@@ -85,8 +85,10 @@
         </span>
       </a>
     </mat-menu>
+
     <div class="line content-select">
       <i></i>
+      <label for="lang"></label>
       <select name="lang" id="lang" [(ngModel)]="lang" (change)="translate()">
         <option selected value="es">es-ESP</option>
         <option value="fr">fr-FRA</option>
