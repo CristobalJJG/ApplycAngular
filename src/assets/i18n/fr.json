@@ -36,6 +36,7 @@
     "invalid-cred": "Informations d'identification invalides.",
     "not-fount": "Aucun utilisateur avec ce courriel n'existe.",
     "many-tries": "Trop de tentatives",
+    "chungo": "Désolé, nous rencontrons des problèmes.",
     "": ""
   }
 }

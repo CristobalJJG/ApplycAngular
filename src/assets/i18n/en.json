@@ -35,7 +35,7 @@
     "invalid-pass": "Invalid password.",
     "invalid-cred": "Invalid credentials.",
     "not-fount": "No users with that email exist.",
-    "many-tries": "Too many attempts",
-    "": ""
+    "many-tries": "Too many attempts.",
+    "chungo": "Sorry, we are having problems."
   }
 }

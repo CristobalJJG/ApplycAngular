@@ -36,6 +36,7 @@
     "invalid-cred": "Correo o Contraseña inválidos.",
     "not-fount": "No existen usuarios con ese correo.",
     "many-tries": "Demasiados intentos",
+    "chungo": "Lo sentimos, estamos teniendo problemas.",
     "": ""
   }
 }
