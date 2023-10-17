@@ -3,7 +3,8 @@
     "applyc": "Apps del Liceo",
     "private": "Área Privada",
     "language": "Idioma:",
-    "login": "Entrar"
+    "login": "Entrar",
+    "logout": "Cerrar Sesión"
   },
   "body": {
     "hi": "¡Buenas! :D",

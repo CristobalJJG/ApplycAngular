@@ -3,7 +3,8 @@
     "applyc": "Lyceum Apps",
     "private": "Private area",
     "language": "Language:",
-    "login": "Log In"
+    "login": "Log In",
+    "logout": "Log Out"
   },
   "body": {
     "hi": "Hi! :D",

@@ -45,7 +45,14 @@
       </svg>
       {{ "header.login" | translate }}
     </button>
-    <p *ngIf="user != ''" (click)="logout()">{{ user }}</p>
+    <button
+      class="outlined"
+      matTooltip="{{ 'header.logout' | translate }}"
+      *ngIf="user != ''"
+      (click)="logout()"
+    >
+      {{ user }}
+    </button>
   </div>
 </header>
 

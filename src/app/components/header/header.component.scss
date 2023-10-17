@@ -35,6 +35,9 @@ h2 {
   button {
     @include button($blue, $white, 175px, 35px);
   }
+  button {
+    @include outlinedButton($blue, $white, 175px, 35px);
+  }
 }
 
 .line {

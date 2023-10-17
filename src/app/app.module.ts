@@ -1,10 +1,20 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+/* Componentes */
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+/* Páginas */
+import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+import { AccessComponent } from './pages/access/access.component';
+
+/* Translate */
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {
   TranslateLoader,
@@ -12,13 +22,13 @@ import {
   TranslatePipe,
 } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { FormsModule } from '@angular/forms';
-import { HomeComponent } from './pages/home/home.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { AccessComponent } from './pages/access/access.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+
+/* Cookies */
 import { CookieService } from 'ngx-cookie-service';
+
+/* Material */
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -47,6 +57,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FormsModule,
     BrowserAnimationsModule,
     MatSnackBarModule,
+    MatTooltipModule,
   ],
   providers: [TranslatePipe, CookieService],
   bootstrap: [AppComponent],

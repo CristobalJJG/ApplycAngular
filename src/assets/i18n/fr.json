@@ -3,7 +3,8 @@
     "applyc": "Apps du lycée",
     "private": "Zone privée",
     "language": "Langue:",
-    "login": "Entrer"
+    "login": "Entrer",
+    "logout": "Déconnexion "
   },
   "body": {
     "hi": "Salut! :D",
