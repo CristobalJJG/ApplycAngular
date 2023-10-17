@@ -1,17 +1,4 @@
-<a
-  class="card"
-  href="{{ data.url }}"
-  rel="oppener"
-  target="_blank"
-  *ngIf="data != undefined; else blank"
->
-  <img src="{{ data.img }}" alt="{{ data.name }}" width="250" height="250" />
-  <p>{{ data.name }}</p>
+<a class="card" href="{{ data?.url }}" rel="oppener" target="_blank">
+  <img src="{{ data?.img }}" alt="{{ data?.name }}" width="250" height="250" />
+  <p>{{ data?.name }}</p>
 </a>
-
-<ng-template #blank>
-  <div class="card">
-    <span class="skeleton"></span>
-    <p class="name"></p>
-  </div>
-</ng-template>
