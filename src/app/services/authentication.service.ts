@@ -56,7 +56,7 @@ export class AuthenticationService {
           this.sbs.openSnackBar('snack.validate', '');
           this.logout();
         } else {
-          this.cs.set('username', userEmail.split('@')[0]);
+          this.cs.set('applyc_username', userEmail.split('@')[0]);
           this.cs.set('applyc_uid', result.user.uid);
           this.sbs.openSnackBar('snack.login', '');
           setTimeout(() => {

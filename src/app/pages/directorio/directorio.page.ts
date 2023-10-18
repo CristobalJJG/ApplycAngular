@@ -17,12 +17,10 @@ export class DirectorioPage {
     private auth: AuthenticationService,
     private cs: CookieService
   ) {
+    if (!auth.isUserLogged()) location.href = '/not-logged';
+    let uid = cs.get('applyc_uid');
     db.getAllUserInformation().then((pa: Person[]) => {
       pa.forEach((p) => this.personArray.push(p));
     });
-
-    if (!auth.isUserLogged()) location.href = '/not-logged';
-    let uid = cs.get('applyc_uid');
-    console.log(uid);
   }
 }

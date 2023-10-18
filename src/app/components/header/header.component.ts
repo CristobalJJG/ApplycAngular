@@ -19,7 +19,7 @@ export class HeaderComponent {
     private sbs: SnackbarService
   ) {
     this.lang = ts.getLang();
-    let aux = cs.get('username');
+    let aux = cs.get('applyc_username');
     if (aux) this.user = aux;
   }
 

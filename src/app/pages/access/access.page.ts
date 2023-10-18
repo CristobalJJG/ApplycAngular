@@ -21,8 +21,7 @@ export class AccessPage implements OnInit {
   error: string = '';
 
   ngOnInit() {
-    let aux = this.cs.get('username');
-    if (aux != '') window.location.href = '';
+    if (this.auth.isUserLogged()) window.location.href = '';
   }
 
   async login(email: string, password: string) {
