@@ -49,5 +49,18 @@
     "minfo": "Más Info",
     "search": "Buscar...",
     "add": "Añadir"
+  },
+  "error-page": {
+    "btn": "Volver a la página de Inicio",
+    "401": {
+      "btn": "Iniciar Sesión",
+      "title": "Necesitas iniciar sesión para poder acceder a este apartado."
+    },
+    "403": {
+      "title": "No tienes permisos para acceder a este apartado."
+    },
+    "404": {
+      "title": "La página a la que has intentado acceder no existe."
+    }
   }
 }

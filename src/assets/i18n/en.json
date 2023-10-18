@@ -48,5 +48,18 @@
     "minfo": "More Info",
     "search": "Search...",
     "add": "Add"
+  },
+  "error-page": {
+    "btn": "Back to the Home page",
+    "401": {
+      "btn": "Start Session",
+      "title": "You need to log in to access this section."
+    },
+    "403": {
+      "title": "You do not have permissions to access this section."
+    },
+    "404": {
+      "title": "The page you have tried to access does not exist."
+    }
   }
 }

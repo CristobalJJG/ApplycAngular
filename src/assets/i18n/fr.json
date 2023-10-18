@@ -50,5 +50,18 @@
     "minfo": "Plus d'infos",
     "search": "Rechercher...",
     "add": "Ajouter"
+  },
+  "error-page": {
+    "btn": "Retour à la page d'accueil",
+    "401": {
+      "btn": "Session de départ",
+      "title": "Vous devez vous connecter pour accéder à cette section."
+    },
+    "403": {
+      "title": "Vous n'avez pas d'autorisations pour accéder à cette section."
+    },
+    "404": {
+      "title": "La page à laquelle vous avez essayé d'accéder n'existe pas."
+    }
   }
 }
