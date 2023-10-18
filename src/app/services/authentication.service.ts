@@ -9,7 +9,7 @@ import {
 
 import { environment } from 'src/environments/environment.development';
 import { initializeApp } from 'firebase/app';
-import { SnackbarService } from './snackbar.service';
+import { SnackbarService } from './aux-components/snackbar.service';
 import { DatabaseService } from './database.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ErrorManagerService } from './error-manager.service';

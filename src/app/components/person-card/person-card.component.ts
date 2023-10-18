@@ -8,4 +8,5 @@ import { Person } from 'src/app/classes/Person';
 })
 export class PersonCardComponent {
   @Input() person!: Person;
+  @Input() isAdmin!: boolean;
 }

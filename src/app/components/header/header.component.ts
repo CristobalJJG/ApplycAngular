@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { TranslateService } from 'src/app/services/translate.service';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthenticationService } from 'src/app/services/authentication.service';
-import { SnackbarService } from 'src/app/services/snackbar.service';
+import { SnackbarService } from 'src/app/services/aux-components/snackbar.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',

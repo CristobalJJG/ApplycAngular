@@ -8,10 +8,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './components/header/header.component';
 import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { PersonCardComponent } from './components/person-card/person-card.component';
 
 /* Páginas */
 import { AppComponent } from './app.component';
 import { HomePage } from './pages/home/home.page';
+import { AccessPage } from './pages/access/access.page';
 import { DirectorioPage } from './pages/directorio/directorio.page';
 import { PersonalPage } from './pages/personal/personal.page';
 import { DocumentacionPage } from './pages/documentacion/documentacion.page';
@@ -36,8 +39,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
-import { AccessPage } from './pages/access/access.page';
-import { PersonCardComponent } from './components/person-card/person-card.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -62,6 +64,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     CardComponent,
     FooterComponent,
     PersonCardComponent,
+    AddUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     MatSnackBarModule,
     MatTooltipModule,
     MatMenuModule,
+    MatDialogModule,
   ],
   providers: [TranslatePipe, CookieService],
   bootstrap: [AppComponent],

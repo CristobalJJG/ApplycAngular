@@ -1,0 +1,44 @@
+@import "../../../styles.scss";
+
+.flex {
+  display: grid;
+  align-items: center;
+  height: 100px;
+  grid-template-columns: 4fr 1fr;
+  margin: 0 0 10px 0;
+  &.isAdmin {
+    grid-template-columns: 4fr 1fr 1.5fr;
+  }
+}
+.input {
+  width: calc(100% - 1.2rem - 1rem);
+  margin: 0;
+}
+
+.refresh {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  img {
+    transition: all 1s ease;
+
+    &:hover {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.btn {
+  @include button($blue, $white, 100%, 35px);
+}
+
+.card {
+  margin: 0 15px 35px 15px;
+}
+
+.overflow {
+  height: 700px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}

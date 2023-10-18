@@ -13,6 +13,7 @@
   },
   "access": {
     "title": "¡Buenas!",
+    "title2": "Anadir Usuario Nuevo",
     "email": "Correo Corporativo",
     "password": "Contraseña",
     "login": "Entrar",
@@ -39,5 +40,14 @@
     "many-tries": "Demasiados intentos",
     "chungo": "Lo sentimos, estamos teniendo problemas.",
     "": ""
+  },
+  "directory": {
+    "name": "Nombre",
+    "email": "Correo Corporativo",
+    "profession": "Profesión",
+    "department": "Department",
+    "minfo": "Más Info",
+    "search": "Buscar...",
+    "add": "Añadir"
   }
 }

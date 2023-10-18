@@ -1,10 +1,32 @@
-<p>directorio works!</p>
 <div>
   <!-- Buscador -->
-  <section></section>
-  <section>
-    <article *ngFor="let p of personArray">
-      <app-person-card [person]="p"></app-person-card>
+  <section class="flex" [class.isAdmin]="isAdmin">
+    <input
+      type="text"
+      placeholder="{{'directory.search' | translate}}"
+      class="input"
+      [class.isAdmin]="isAdmin"
+    />
+    <div class="refresh" [class.isAdmin]="isAdmin">
+      <img
+        width="28"
+        height="28"
+        src="https://img.icons8.com/ios-glyphs/30/refresh--v1.png"
+        alt="refresh--v1"
+        (click)="getUsers()"
+      />
+    </div>
+    <input
+      type="button"
+      value="{{'directory.add' | translate}}"
+      class="btn"
+      (click)="openAddUserDialog()"
+      *ngIf="isAdmin"
+    />
+  </section>
+  <section class="overflow">
+    <article *ngFor="let p of filteredArray" class="card">
+      <app-person-card [person]="p" [isAdmin]="isAdmin"></app-person-card>
     </article>
   </section>
 </div>

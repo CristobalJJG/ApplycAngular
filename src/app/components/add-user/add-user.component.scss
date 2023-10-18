@@ -1,0 +1,27 @@
+@import "../../../styles.scss";
+
+.container,
+.form {
+  width: 300px;
+  height: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.btn {
+  margin-top: 25px;
+  color: $white;
+  @include button($blue, $white, 200px, 40px);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.btn {
+    justify-content: center;
+    gap: 10px;
+  }
+}

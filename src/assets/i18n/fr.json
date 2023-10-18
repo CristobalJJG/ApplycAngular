@@ -1,4 +1,5 @@
 {
+  "//": "Añadido todo desde GoogleTraductor",
   "header": {
     "applyc": "Apps du lycée",
     "private": "Zone privée",
@@ -13,6 +14,7 @@
   },
   "access": {
     "title": "Bonjour!",
+    "title2": "Ajouter un nouvel utilisateur",
     "email": "Courriel Entreprise",
     "password": "Mot de passe",
     "login": "Se Connecter",
@@ -39,5 +41,14 @@
     "many-tries": "Trop de tentatives",
     "chungo": "Désolé, nous rencontrons des problèmes.",
     "": ""
+  },
+  "directory": {
+    "name": "Nom",
+    "email": " Courriel professionnel",
+    "profession": "Profession",
+    "department": "Service",
+    "minfo": "Plus d'infos",
+    "search": "Rechercher...",
+    "add": "Ajouter"
   }
 }

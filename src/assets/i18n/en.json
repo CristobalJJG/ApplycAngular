@@ -13,6 +13,7 @@
   },
   "access": {
     "title": "Hello!",
+    "title2": "Add New User",
     "email": "Corporate Email",
     "password": "Password",
     "login": "Log In",
@@ -38,5 +39,14 @@
     "not-fount": "No users with that email exist.",
     "many-tries": "Too many attempts.",
     "chungo": "Sorry, we are having problems."
+  },
+  "directory": {
+    "name": "Name",
+    "email": "Corporate Email",
+    "profession": "Profession",
+    "department": "Department",
+    "minfo": "More Info",
+    "search": "Search...",
+    "add": "Add"
   }
 }

@@ -1,0 +1,37 @@
+<div class="container">
+  <form class="form">
+    <h2 class="logo">{{ "access.title2" | translate }}</h2>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      required
+      #email
+      class="input"
+      placeholder="{{ 'access.email' | translate }}"
+    />
+    <input
+      type="password"
+      name="password"
+      id="password"
+      required
+      #password
+      class="input"
+      placeholder="{{ 'access.password' | translate }}"
+    />
+
+    <button
+      type="submit"
+      class="flex btn submit"
+      (click)="register(email.value, password.value)"
+    >
+      <img
+        src="../../../assets/images/directorio/add-user.png"
+        alt="add user"
+        width="24"
+        height="24"
+      />
+      {{ "directory.add" | translate }}
+    </button>
+  </form>
+</div>

@@ -24,7 +24,13 @@ export class DatabaseService {
    */
   async getUserInfo(id: string) {
     let snap = await getDoc(doc(this.db, 'users', id));
-    console.log(snap.data());
+    let p = new Person(
+      snap.id,
+      snap.data()!['info']['personalData'],
+      snap.data()!['info']['contactData'],
+      snap.data()!['info']['professionalData']
+    );
+    return p;
   }
 
   /**
