@@ -37,6 +37,12 @@ export class AuthenticationService {
     private ms: ErrorManagerService
   ) {}
 
+  isUserLogged() {
+    let check1 = this.cs.check('applyc_username');
+    let check2 = this.cs.check('applyc_uid');
+    return check1 && check2;
+  }
+
   async login(userEmail: string, password: string) {
     let error = [''];
     await signInWithEmailAndPassword(
@@ -51,6 +57,7 @@ export class AuthenticationService {
           this.logout();
         } else {
           this.cs.set('username', userEmail.split('@')[0]);
+          this.cs.set('applyc_uid', result.user.uid);
           this.sbs.openSnackBar('snack.login', '');
           setTimeout(() => {
             window.location.reload();
@@ -93,7 +100,7 @@ export class AuthenticationService {
     await signOut(AuthenticationService.auth)
       .then(() => {
         AuthenticationService.user = null;
-        this.cs.delete('username');
+        this.cs.deleteAll();
       })
       .catch((error) => this.showError(error));
   }

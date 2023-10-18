@@ -1,1 +1,10 @@
 <p>directorio works!</p>
+<div>
+  <!-- Buscador -->
+  <section></section>
+  <section>
+    <article *ngFor="let p of personArray">
+      <app-person-card [person]="p"></app-person-card>
+    </article>
+  </section>
+</div>

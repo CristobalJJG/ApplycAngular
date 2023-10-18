@@ -16,6 +16,9 @@ import { DirectorioPage } from './pages/directorio/directorio.page';
 import { PersonalPage } from './pages/personal/personal.page';
 import { DocumentacionPage } from './pages/documentacion/documentacion.page';
 import { ParkingPage } from './pages/parking/parking.page';
+import { NotFoundPage } from './pages/error/not-found/not-found.page';
+import { NotLoggedPage } from './pages/error/not-logged/not-logged.page';
+import { NotPermissionPage } from './pages/error/not-permission/not-permission.page';
 
 /* Translate */
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -34,6 +37,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 import { AccessPage } from './pages/access/access.page';
+import { PersonCardComponent } from './components/person-card/person-card.component';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -49,11 +53,15 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     PersonalPage,
     DocumentacionPage,
     ParkingPage,
+    NotFoundPage,
+    NotLoggedPage,
+    NotPermissionPage,
 
     /* Components */
     HeaderComponent,
     CardComponent,
     FooterComponent,
+    PersonCardComponent,
   ],
   imports: [
     BrowserModule,

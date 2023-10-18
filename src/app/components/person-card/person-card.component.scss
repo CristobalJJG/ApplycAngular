@@ -1,0 +1,49 @@
+@import "../../../styles.scss";
+
+.container {
+  width: 550px;
+  height: 100px;
+  border-radius: 10px;
+  background-color: $light-gray;
+  box-shadow: $shadow-bottomer;
+  &:hover {
+    background-color: rgba($gray, 0.5);
+  }
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  .space {
+    margin-left: 25px;
+    flex-direction: column;
+  }
+  &.center {
+    align-items: center;
+  }
+}
+
+$margin: 5px;
+
+.picture {
+  margin-left: calc($margin * 2);
+}
+
+.ajustes {
+  margin-right: calc($margin * 2);
+  transition: all 2s ease;
+  cursor: pointer;
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+h3 {
+  font-size: medium;
+  margin-top: $margin;
+}
+
+.down-text {
+  margin-bottom: $margin;
+  font-size: small;
+}

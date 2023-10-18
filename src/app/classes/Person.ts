@@ -52,6 +52,14 @@ export class Person {
   getUserInfoJSON() {
     return {
       _id: this._id,
+      contactData: {
+        corporativeEmail: this.contactData.corporativeEmail,
+        address: this.contactData.address,
+        personalEmail: this.contactData.personalEmail,
+        postalCode: this.contactData.postalCode,
+        phoneNumber: this.contactData.phoneNumber,
+        municipio: this.contactData.municipio,
+      },
       personalData: {
         name1: this.personalData.name1,
         name2: this.personalData.name2,
@@ -61,17 +69,11 @@ export class Person {
         nationality: this.personalData.nationality,
         dniNie: this.personalData.dniNie,
         nSS: this.personalData.nSS,
-        username: this.personalData.username,
+        username:
+          this.personalData.username ||
+          this.contactData.corporativeEmail.split('@')[0],
         isAdmin: this.personalData.isAdmin || false,
         gender: this.personalData.gender || Gender.Other,
-      },
-      contactData: {
-        corporativeEmail: this.contactData.corporativeEmail,
-        address: this.contactData.address,
-        personalEmail: this.contactData.personalEmail,
-        postalCode: this.contactData.postalCode,
-        phoneNumber: this.contactData.phoneNumber,
-        municipio: this.contactData.municipio,
       },
       professionalData: {
         profession: this.professionalData.profession,
@@ -119,6 +121,75 @@ export class Person {
   }
   setCorporativeEmail(email: string) {
     this.contactData.corporativeEmail = email;
+  }
+
+  /* Funciones auxiliares */
+  toString() {
+    return (
+      this._id +
+      '\n\n----PERSONAL_DATA---- ' +
+      this.personalDataToString() +
+      '\n\n----CONTACT_DATA----' +
+      this.contactDataToString() +
+      '\n\n----PROFESSIONAL_DATA----' +
+      this.professionalDataToString()
+    );
+  }
+
+  personalDataToString() {
+    let pd = this.personalData;
+    return (
+      '\nname1:' +
+      pd.name1 +
+      '\nname2:' +
+      pd.name2 +
+      '\nsurname1:' +
+      pd.surname1 +
+      '\nsurname2:' +
+      pd.surname2 +
+      '\nbirthdate:' +
+      pd.birthdate +
+      '\nnationality:' +
+      pd.nationality +
+      '\ndniNie:' +
+      pd.dniNie +
+      '\nnSS:' +
+      pd.nSS +
+      '\nusername:' +
+      pd.username +
+      '\nisAdmin:' +
+      pd.isAdmin +
+      '\ngender:' +
+      pd.gender
+    );
+  }
+  contactDataToString() {
+    let cd = this.contactData;
+    return (
+      '\ncorporativeEmail:' +
+      cd.corporativeEmail +
+      '\naddress:' +
+      cd.address +
+      '\npersonalEmail:' +
+      cd.personalEmail +
+      '\npostalCode:' +
+      cd.postalCode +
+      '\nphoneNumber:' +
+      cd.phoneNumber +
+      '\nmunicipio:' +
+      cd.municipio
+    );
+  }
+  professionalDataToString() {
+    let pd = this.professionalData;
+    return (
+      '\nprofession:' +
+      pd.profession +
+      '\ndepartment:' +
+      pd.department +
+      '\naditionalInfo:' +
+      pd.aditionalInfo
+    );
   }
 }
 

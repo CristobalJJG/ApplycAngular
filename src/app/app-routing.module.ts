@@ -6,6 +6,9 @@ import { DirectorioPage } from './pages/directorio/directorio.page';
 import { PersonalPage } from './pages/personal/personal.page';
 import { DocumentacionPage } from './pages/documentacion/documentacion.page';
 import { ParkingPage } from './pages/parking/parking.page';
+import { NotFoundPage } from './pages/error/not-found/not-found.page';
+import { NotLoggedPage } from './pages/error/not-logged/not-logged.page';
+import { NotPermissionPage } from './pages/error/not-permission/not-permission.page';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -20,8 +23,10 @@ const routes: Routes = [
       { path: 'users', component: UsersAdminPanelComponent },
       { path: 'collections', component: CollectionsAdminPanelComponent }
     ]
-  },
-  { path: '**', component: NotFoundComponent } */
+  }, */
+  { path: 'not-logged', component: NotLoggedPage },
+  { path: 'not-permission', component: NotPermissionPage },
+  { path: '**', component: NotFoundPage },
 ];
 
 @NgModule({
