@@ -1,8 +1,21 @@
 @import "/src/styles";
-strong,
-p {
-  margin: 10px 25px;
-}
+
 footer {
   box-shadow: $shadow-upper;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  strong,
+  p {
+    margin-left: 50px;
+  }
+  $margin: 10px;
+  strong {
+    margin-top: $margin;
+  }
+  p {
+    margin-bottom: $margin;
+  }
 }

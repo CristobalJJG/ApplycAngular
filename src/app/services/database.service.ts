@@ -54,7 +54,7 @@ export class DatabaseService {
    * @param {string} secondName El segundo nombre del usuario (opcional).
    * @param {string} secondSurname El segundo apellido del usuario (opcional).
    */
-  async updateUserName(
+  /*   async updateUserName(
     firstName: string,
     firstSurname: string,
     secondName?: string,
@@ -64,7 +64,7 @@ export class DatabaseService {
     let surname = this.toPascal(firstSurname);
     if (secondName) name += ' ' + this.toPascal(secondName);
     if (secondSurname) surname += ' ' + this.toPascal(secondSurname);
-  }
+  } */
 
   /**
    * Convierte una cadena a PascalCase.
