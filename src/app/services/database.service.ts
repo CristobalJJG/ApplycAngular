@@ -7,6 +7,7 @@ import {
   getFirestore,
   query,
   setDoc,
+  where,
 } from 'firebase/firestore';
 import { AuthenticationService } from './authentication.service';
 import { Person } from '../classes/Person';
@@ -24,13 +25,41 @@ export class DatabaseService {
    */
   async getUserInfo(id: string) {
     let snap = await getDoc(doc(this.db, 'users', id));
-    let p = new Person(
-      snap.id,
-      snap.data()!['info']['personalData'],
-      snap.data()!['info']['contactData'],
-      snap.data()!['info']['professionalData']
-    );
-    return p;
+    if (snap.data() != undefined) {
+      return new Person(
+        snap.id,
+        snap.data()!['info']['personalData'],
+        snap.data()!['info']['contactData'],
+        snap.data()!['info']['professionalData']
+      );
+    } else {
+      console.error(
+        'Los credenciales no están bien, cierra sesión y logéate de nuevo, por favor.'
+      );
+      return undefined;
+    }
+  }
+
+  async isUserAdmin(id: string) {
+    let res = false;
+    let snap = await getDoc(doc(this.db, 'users', id));
+
+    const q = query(collection(this.db, 'users'));
+    const querySnapshot = await getDocs(q);
+
+    var BreakException = {};
+    try {
+      querySnapshot.forEach((doc) => {
+        if (doc.id == snap.id) {
+          res = true;
+          throw BreakException;
+        }
+      });
+    } catch (e) {
+      if (e !== BreakException) throw e;
+    }
+
+    return res;
   }
 
   /**
@@ -42,6 +71,10 @@ export class DatabaseService {
   async addNewUser(id: string, mail: string) {
     let user = new Person(id);
     user.setCorporativeEmail(mail);
+    this.updateUser(id, user);
+  }
+
+  async updateUser(id: string, user: Person) {
     let info = user.getUserInfoJSON();
     await setDoc(doc(this.db, 'users', id), { info });
   }

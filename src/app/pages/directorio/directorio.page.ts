@@ -22,10 +22,17 @@ export class DirectorioPage {
     private cs: CookieService,
     private dialog: DialogService
   ) {
-    if (!auth.isUserLogged()) location.href = '/not-logged';
-    let uid = cs.get('applyc_uid');
-    db.getUserInfo(uid).then((user: Person) => {
-      this.isAdmin = user.isAdmin();
+    this.isRegistered();
+  }
+
+  async isRegistered() {
+    if (await !this.auth.isUserLogged()) location.href = '/not-logged';
+    let uid = this.cs.get('applyc_uid');
+    this.db.getUserInfo(uid).then((user: Person | undefined) => {
+      this.isAdmin = false;
+      this.db.isUserAdmin(uid).then((res: boolean) => {
+        this.isAdmin = res;
+      });
     });
     this.getUsers();
   }

@@ -26,7 +26,9 @@
     "validate": "Asegúrate de haber validado tu cuenta.",
     "logout": "Cerró sesión de forma exitosa.",
     "error": "Error",
-    "close": "Cerrar."
+    "close": "Cerrar.",
+    "problem": "Hubo un problema con sus credenciales, inicie sesión otra vez, por favor.",
+    "updateDone": "Se ha actualizado con éxito."
   },
   "error": {
     "sameBefore": "Correo y contraseña introducido son iguales a la anterior.",
@@ -49,6 +51,25 @@
     "minfo": "Más Info",
     "search": "Buscar...",
     "add": "Añadir"
+  },
+  "profile": {
+    "expansion": {
+      "contact": "Datos de contacto",
+      "personal": "Datos personales",
+      "professional": "Datos profesionales"
+    },
+    "name1": "Nombre",
+    "name2": "Segundo Nombre",
+    "surname1": "Primer Apellido",
+    "surname2": "Segundo Apellido",
+    "birth": "Nacimiento",
+    "dniNie": "DNI/NIE",
+    "gender": "Género",
+    "nSS": "Nº de la Seguridad Social",
+    "nationality": "Nacionalidad",
+    "username": "Username",
+
+    "save": "Guardar"
   },
   "error-page": {
     "btn": "Volver a la página de Inicio",

@@ -27,7 +27,8 @@
     "validate": "Assurez-vous d'avoir validé votre compte.",
     "logout": "Vous avez été déconnecté avec succès.",
     "error": "Erreur",
-    "close": "Fermer."
+    "close": "Fermer.",
+    "problem": "Il y avait un problème avec vos informations d'identification, connectez-vous à nouveau, s'il vous plaît."
   },
   "error": {
     "sameBefore": "Le courriel et le mot de passe saisis sont les mêmes que les précédents.",
@@ -50,6 +51,23 @@
     "minfo": "Plus d'infos",
     "search": "Rechercher...",
     "add": "Ajouter"
+  },
+  "profile": {
+    "expansion": {
+      "contact": "Contact data",
+      "personal": "Données personnelles",
+      "professional": "Données professionnelles"
+    },
+    "birth": "Naissance",
+    "dniNie": "DNI / NIE",
+    "gender": "Genre",
+    "nSS": "Pas de la sécurité sociale",
+    "name1": "Nom",
+    "name2": "Deuxième nom",
+    "nationality": "Nationalité",
+    "surname1": "Premier nom de famille",
+    "surname2": "Deuxième nom de famille",
+    "username": "Nom d'utilisateur"
   },
   "error-page": {
     "btn": "Retour à la page d'accueil",

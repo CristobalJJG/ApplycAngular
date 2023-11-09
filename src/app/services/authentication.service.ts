@@ -13,6 +13,7 @@ import { SnackbarService } from './aux-components/snackbar.service';
 import { DatabaseService } from './database.service';
 import { CookieService } from 'ngx-cookie-service';
 import { ErrorManagerService } from './error-manager.service';
+import { Router } from '@angular/router';
 @Injectable({
   providedIn: 'root',
 })
@@ -34,13 +35,29 @@ export class AuthenticationService {
     private sbs: SnackbarService,
     private db: DatabaseService,
     private cs: CookieService,
-    private ms: ErrorManagerService
+    private ms: ErrorManagerService,
+    private router: Router
   ) {}
 
-  isUserLogged() {
+  /*
+   * Decimos que un usuario está loggeado cuando su username y su uid están en las cookies
+   * También es necesario que el uid exista.
+   */
+  async isUserLogged() {
     let check1 = this.cs.check('applyc_username');
     let check2 = this.cs.check('applyc_uid');
-    return check1 && check2;
+    let check3 = false;
+    if (check2) {
+      let uid = this.cs.get('applyc_uid');
+      let snap = await this.db.getUserInfo(uid);
+      if (snap) check3 = true;
+    }
+    let res = check1 && check2;
+    if (!res) {
+      this.sbs.openSnackBar('snack.problem', '');
+      setTimeout(() => {}, 2000);
+    }
+    return res;
   }
 
   async login(userEmail: string, password: string) {
@@ -101,6 +118,7 @@ export class AuthenticationService {
       .then(() => {
         AuthenticationService.user = null;
         this.cs.deleteAll();
+        this.router.navigateByUrl('/home');
       })
       .catch((error) => this.showError(error));
   }

@@ -10,6 +10,9 @@ import { CardComponent } from './components/card/card.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { PersonCardComponent } from './components/person-card/person-card.component';
+import { PersonalInfoComponent } from './pages/personal/personal-info/personal-info.component';
+import { ContactInfoComponent } from './pages/personal/contact-info/contact-info.component';
+import { ProfessionalInfoComponent } from './pages/personal/professional-info/professional-info.component';
 
 /* Páginas */
 import { AppComponent } from './app.component';
@@ -40,6 +43,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
   return new TranslateHttpLoader(http);
@@ -65,6 +69,9 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     FooterComponent,
     PersonCardComponent,
     AddUserComponent,
+    PersonalInfoComponent,
+    ContactInfoComponent,
+    ProfessionalInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -79,10 +86,13 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     }),
     FormsModule,
     BrowserAnimationsModule,
+
+    /* Material */
     MatSnackBarModule,
     MatTooltipModule,
     MatMenuModule,
     MatDialogModule,
+    MatExpansionModule,
   ],
   providers: [TranslatePipe, CookieService],
   bootstrap: [AppComponent],

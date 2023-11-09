@@ -24,8 +24,8 @@ export class AddUserComponent {
   ngOnInit() {
     if (!this.auth.isUserLogged()) location.href = '/not-logged';
     let uid = this.cs.get('applyc_uid');
-    this.db.getUserInfo(uid).then((user: Person) => {
-      if (!user.isAdmin()) location.href = '/not-permission';
+    this.db.getUserInfo(uid).then((user: Person | undefined) => {
+      if (!user?.isAdmin()) location.href = '/not-permission';
     });
   }
 

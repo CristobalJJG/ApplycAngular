@@ -26,7 +26,8 @@
     "validate": "Make sure you have validated your account.",
     "logout": "Successfully logged out.",
     "error": "Error.",
-    "close": "Close."
+    "close": "Close.",
+    "problem": "There was a problem with your credentials, log in again, please."
   },
   "error": {
     "sameBefore": "Email and password entered are the same as before.",
@@ -48,6 +49,23 @@
     "minfo": "More Info",
     "search": "Search...",
     "add": "Add"
+  },
+  "profile": {
+    "expansion": {
+      "contact": "Contact data",
+      "personal": "Personal data",
+      "professional": "Professional data"
+    },
+    "birth": "Birth Date",
+    "dniNie": "DNI / NIE",
+    "gender": "Gender",
+    "nSS": "Nº Social Security",
+    "name1": "Name",
+    "name2": "Second Name",
+    "nationality": "Nationality",
+    "surname1": "First Surname",
+    "surname2": "Second Surname",
+    "username": "Username"
   },
   "error-page": {
     "btn": "Back to the Home page",

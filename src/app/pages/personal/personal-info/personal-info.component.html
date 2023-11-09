@@ -1,0 +1,158 @@
+<form>
+  <div class="form">
+    <!-- Primer nombre -->
+    <div class="col">
+      <label for="name1">{{ "profile.name1" | translate }}</label>
+      <input
+        type="text"
+        id="name1"
+        class="input"
+        placeholder="{{ 'profile.name1' | translate }}"
+        [class.filled]="personalData?.name1"
+        #name1
+        (input)="savePersonalData('name1', name1.value)"
+        value="{{ personalData?.name1 }}"
+      />
+    </div>
+    <!-- Segundo nombre -->
+    <div class="col">
+      <label for="name2">{{ "profile.name2" | translate }}</label>
+      <input
+        type="text"
+        id="name2"
+        class="input"
+        placeholder="{{ 'profile.name2' | translate }}"
+        [class.filled]="personalData?.name2"
+        #name2
+        (input)="savePersonalData('name2', name2.value)"
+        value="{{ personalData?.name2 }}"
+      />
+    </div>
+    <!-- Primer apellido -->
+    <div class="col">
+      <label for="surname1">{{ "profile.surname1" | translate }}</label>
+      <input
+        type="text"
+        id="surname1"
+        class="input"
+        placeholder="{{ 'profile.surname1' | translate }}"
+        [class.filled]="personalData?.surname1"
+        #surname1
+        (input)="savePersonalData('surname1', surname1.value)"
+        value="{{ personalData?.surname1 }}"
+      />
+    </div>
+    <!-- Segundo apellido -->
+    <div class="col">
+      <label for="surname2">{{ "profile.surname2" | translate }}</label>
+      <input
+        type="text"
+        id="surname2"
+        class="input"
+        placeholder="{{ 'profile.surname2' | translate }}"
+        [class.filled]="personalData?.surname2"
+        #surname2
+        (input)="savePersonalData('surname2', surname2.value)"
+        value="{{ personalData?.surname2 }}"
+      />
+    </div>
+
+    <!-- Cumpleaños -->
+    <div class="col">
+      <label for="birth">{{ "profile.birth" | translate }}</label>
+      <input
+        type="date"
+        id="birth"
+        class="input"
+        placeholder="{{ 'profile.birth' | translate }}"
+        [class.filled]="personalData?.birthdate"
+        #birthdate
+        (input)="savePersonalData('birthdate', birthdate.value)"
+        value="{{ personalData?.birthdate }}"
+      />
+    </div>
+    <!-- DNI/NIE -->
+    <div class="col">
+      <label for="dniNie">{{ "profile.dniNie" | translate }}</label>
+      <input
+        type="text"
+        id="dniNie"
+        class="input"
+        placeholder="{{ 'profile.dniNie' | translate }}"
+        [class.filled]="personalData?.dniNie"
+        #dniNie
+        (input)="savePersonalData('dniNie', dniNie.value)"
+        value="{{ personalData?.dniNie }}"
+      />
+    </div>
+
+    <!-- Género -->
+    <div class="col">
+      <label for="gender">{{ "profile.gender" | translate }}</label>
+      <input
+        type="text"
+        id="gender"
+        class="input"
+        placeholder="{{ 'profile.gender' | translate }}"
+        [class.filled]="personalData?.gender"
+        #gender
+        (input)="savePersonalData('gender', gender.value)"
+        value="{{ personalData?.gender }}"
+      />
+    </div>
+    <!-- nSS -->
+    <div class="col">
+      <label for="nSS">{{ "profile.nSS" | translate }}</label>
+      <input
+        type="text"
+        id="nSS"
+        class="input"
+        placeholder="{{ 'profile.nSS' | translate }}"
+        [class.filled]="personalData?.nSS"
+        #nSS
+        (input)="savePersonalData('nSS', nSS.value)"
+        value="{{ personalData?.nSS }}"
+      />
+    </div>
+    <!-- Cumpleaños -->
+    <div class="col">
+      <label for="nationality">{{ "profile.nationality" | translate }}</label>
+      <input
+        type="text"
+        id="nationality"
+        class="input"
+        (change)="savePersonalData('', $event.target)"
+        placeholder="{{ 'profile.nationality' | translate }}"
+        [class.filled]="personalData?.nationality"
+        #nationality
+        (input)="savePersonalData('nationality', nationality.value)"
+        value="{{ personalData?.nationality }}"
+      />
+    </div>
+    <!-- DNI/NIE -->
+    <div class="col">
+      <label for="username">{{ "profile.username" | translate }}</label>
+      <input
+        type="text"
+        id="username"
+        class="input"
+        disabled
+        placeholder="{{ 'profile.username' | translate }}"
+        [class.filled]="personalData?.username"
+        #username
+        (input)="savePersonalData('username', username.value)"
+        value="{{ personalData?.username }}"
+      />
+    </div>
+  </div>
+  <button type="submit" class="flex btn submit" (click)="save()">
+    <svg width="16" height="16" viewBox="0 0 16 16">
+      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z" />
+      <path
+        fill-rule="evenodd"
+        d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
+      />
+    </svg>
+    {{ "access.login" | translate }}
+  </button>
+</form>

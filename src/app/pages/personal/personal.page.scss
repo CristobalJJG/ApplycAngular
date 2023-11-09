@@ -1,0 +1,72 @@
+@import "../../../styles.scss";
+
+.grid {
+  width: 100%;
+}
+
+form {
+  padding: 16px 24px;
+}
+
+svg {
+  margin-right: 8px;
+}
+.col {
+  display: flex;
+  flex-direction: column;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+}
+
+label {
+  margin-left: 5px;
+  font-size: 18px;
+}
+.input {
+  margin: 0;
+  font-size: 16px;
+  padding: 6px 12px;
+  color: $dark-gray;
+
+  &:disabled {
+    cursor: no-drop;
+  }
+
+  &.filled {
+    background-color: rgba($light-blue, 0.15);
+
+    &:hover {
+      background-color: rgba($light-blue, 0.25);
+    }
+    &:focus {
+      background-color: rgba($light-blue, 0.2);
+      color: $black;
+    }
+  }
+}
+
+.btn {
+  margin-top: 25px;
+  color: $white;
+  @include button($gray, $white, 200px, 40px);
+}
+.submit,
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &.btn {
+    justify-content: center;
+    gap: 10px;
+  }
+}
